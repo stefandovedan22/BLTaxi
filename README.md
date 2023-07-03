@@ -2,6 +2,7 @@
 
 <div>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/3015264a-45e5-438b-a078-7ba2fe293a1e"/>
+  <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/9c05e49e-23c7-4a3a-bc18-edd94db23b7d"/>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/8659b5d3-92aa-4d95-8881-8b6c5ced9861"/>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/2e6e19ee-aae4-4f15-8333-0e72c0fe8373"/>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/a1223518-5615-430b-96c0-307de3a1c3e7"/>
@@ -11,5 +12,4 @@
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/02036048-c16e-4a9e-a99b-38276b1d16aa"/>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/b552e383-e04d-413c-9717-01d3bf087915"/>
   <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/c9648841-8fd7-4a3d-9ada-791ff3284d84"/>
-  <img width="240" src="https://github.com/stefandovedan22/taxi-bl/assets/115324772/9c05e49e-23c7-4a3a-bc18-edd94db23b7d"/>
 <div/>
