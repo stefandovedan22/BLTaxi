@@ -2,19 +2,20 @@ import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+import * as Network from "expo-network";
 import { useDispatch, useSelector } from "react-redux";
 import { setCompany } from "../redux/companySlice";
 
 import Categories from "../components/Categories";
 import ListCompany from "../components/ListCompany";
 
+import offlineData from "../data/offlineData.json";
+
 export default function HomeScreen() {
   const navigation = useNavigation();
   let company = useSelector((state) => state.company.company);
   let loading = useSelector((state) => state.company.loading);
   const dispatch = useDispatch();
-
-  let [temp, setTemp] = useState([]);
 
   let dataMock = [
     {
@@ -23,8 +24,8 @@ export default function HomeScreen() {
       city: "Banja Luka",
       startPrice: "1.60 KM",
       pricePerKm: "1.20 KM",
-      startPriceNight: "1.60 KM",
-      pricePerKmNight: "1.20 KM",
+      startPriceNight: "1.90 KM",
+      pricePerKmNight: "1.50 KM",
       waitingPrice: "15.00 KM po satu",
       baggagePrice: "Lični prtljag se ne naplaćuje.",
       macadamDrivePrice: "Dodatno 2 KM po km.",
@@ -983,44 +984,44 @@ export default function HomeScreen() {
   ];
 
   useEffect(() => {
-    console.log(1);
     navigation.setOptions({
       headerShown: false,
     });
-    console.log(2);
-    // fetch("http://192.168.1.214:3000/data")
-    //   .then((Response) => Response.json())
-    //   .then((data) => {
-    //     setTemp(data);
-    //     dispatch(setCompany(data));
-    //     console.log(3);
-    //   })
-    //   .catch((error) => console.log(error));
-    dispatch(setCompany(dataMock));
-    // let cmp = useSelector(selectCompany);
-    // const company = useSelector(selectCompany);
+    const interval = setInterval(() => {
+      console.log(1);
+      dispatch(setCompany(dataMock));
+      // {
+      //   dispatch(setCompany(offlineData));
+      // }
+      console.log("---");
+      // fetch("https://e043-46-239-6-110.eu.ngrok.io/taxi_company")
+      //   .then((Response) => Response.json())
+      //   .then((data) => {
+      //     dispatch(setCompany(data));
+      //   })
+      //   .catch((error) => console.log(error));
+    }, 5000);
   }, []);
-
-  // loading = useSelector((state) => state.company.loading);
 
   return (
     <SafeAreaView className="bg-white flex-1">
-      {console.log(loading)}
       {loading && (
         <View className="pb-2 mx-4">
-          <Text className="text-2xl font-bold text-cyan-600">Loading...</Text>
+          <Text className="text-2xl font-bold text-sky-600">
+            Učitavanje podataka...
+          </Text>
         </View>
       )}
 
       {!loading && (
         <ScrollView showsVerticalScrollIndicator={true}>
           <View>
-            <View className="pb-2 px-2 items-center">
+            {/* <View className="pb-2 px-2 items-center">
               <Text className="text-2xl font-bold text-cyan-600">
                 Lista Vozila
               </Text>
-            </View>
-            <View>
+            </View> */}
+            <View className="mt-2 mb-0.5">
               <Categories />
             </View>
             <View>

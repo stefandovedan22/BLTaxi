@@ -1,9 +1,12 @@
 {
   "id": 1,
-  "name": "Stefan",
-  "surname": "Dovedan",
-  "username": "Foste",
-  "password": "12345",
+  "valid": "true",
+  "name": "Mirko",
+  "surname": "Mirkovic",
+  "username": "mirko",
+  "password": "mirko",
   "taxi_company_id": "1",
-  "company_name": "Patrol Taxi"
+  "company_name": "Patrol taxi",
+  "company_image": "https://lh3.googleusercontent.com/9PQhR_t8bwL6DtUKN_xiZ4T0FXQ_Ci7BNKVIm7CInsfVJuvjfJOY1gckiK6tnqRsboYDWH2OArY68GmeR4o7aaqOhFmd9MjCzVqljCif",
+  "vehicles": {}
 }

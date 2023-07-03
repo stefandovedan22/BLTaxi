@@ -2,7 +2,6 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
-import CallScreen from "./screens/CallScreen";
 import CompanyScreen from "./screens/CompanyScreen";
 import HomeScreen from "./screens/HomeScreen";
 import MapScreen from "./screens/MapScreen";
@@ -10,7 +9,6 @@ import MapScreen from "./screens/MapScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { View, Text } from "react-native";
 import DriverScreenLogIn from "./screens/DriverScreenLogIn";
 import DriverScreenLoggedIn from "./screens/DriverScreenLoggedIn";
 
@@ -21,7 +19,6 @@ function HomeStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Call" component={CallScreen} />
       <Stack.Screen name="Company" component={CompanyScreen} />
     </Stack.Navigator>
   );
@@ -79,14 +76,3 @@ export default function App() {
     </Provider>
   );
 }
-
-// export default function App() {
-//   return (
-//     <View>
-//       <Text>Yooo</Text>
-//       <Text>Yooo</Text>
-//       <Text>Yooo</Text>
-//       <Text className="text-red-700">Yooo</Text>
-//     </View>
-//   );
-// }

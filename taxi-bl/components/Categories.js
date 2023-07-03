@@ -6,6 +6,8 @@ import { useNavigation } from "@react-navigation/native";
 export default function Categories() {
   let data = useSelector((state) => state.company.company);
   const navigation = useNavigation();
+  const LINK =
+    "https://e043-46-239-6-110.eu.ngrok.io" + "/taxi_company/images/";
 
   return (
     <ScrollView
@@ -29,6 +31,7 @@ export default function Categories() {
           >
             <Image
               source={{ uri: comp.imageUrl }}
+              // source={{ uri: LINK + comp.smallImageUrl }}
               className="h-14 w-14 mx-0.5 rounded-sm"
             />
           </TouchableOpacity>

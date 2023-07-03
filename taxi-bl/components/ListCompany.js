@@ -18,6 +18,7 @@ export default function ListCompany({
   let data = useSelector((state) => state.company.company);
   let availableVehiclesCount = 0;
   let vehiclesCount = 0;
+  let vehiclesTakenCount = 0;
   let [expanded, setExpanded] = useState(false);
   let number;
 
@@ -26,7 +27,7 @@ export default function ListCompany({
   };
 
   return (
-    <View>
+    <View className="mb-0.5">
       {data.map((comp, index) => {
         if (comp.name === name) {
           {
@@ -34,6 +35,9 @@ export default function ListCompany({
             comp.vehicles.map((veh, index) => {
               if (veh.takenByDriver && veh.availableVehicle) {
                 vehiclesCount++;
+              }
+              if (veh.takenByDriver) {
+                vehiclesTakenCount++;
               }
             });
           }
@@ -51,7 +55,7 @@ export default function ListCompany({
           className="border border-cyan-800 bg-cyan-600 flex-1 flex-row px-1 ml-1 rounded-md drop-shadow-lg"
         >
           <Text className="flex-1 text-lg text-white">
-            {name} {vehiclesCount}/{numOfVehicles}
+            {name} {vehiclesCount}/{vehiclesTakenCount}
           </Text>
           <Text className="text-lg text-white mr-2">{startPrice}</Text>
           <Text className="text-lg text-white">{pricePerKm}</Text>
